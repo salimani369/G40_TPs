@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1. oui, on peut utiliser le polymorphisme à ce niveau du TP.
 En regardant les deux classes Serveur et Client, on remarque que recv_all est identique dans les deux. On peut donc créer une classe mère SocketBase qui contient recv_all une seule fois, et faire hériter Serveur et Client de cette classe :
 class SocketBase(ABC):
@@ -31,3 +32,6 @@ tcp est lieux adapté car :
 - TCP garantit que les messages arrivent dans l'ordre
 - TCP garantit qu'aucun message ne se perd
 - La connexion persistante est plus adaptée à une session de chat
+=======
+
+>>>>>>> a87462d3e89924943309542aa2034c2a868008d4
