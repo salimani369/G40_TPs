@@ -44,7 +44,7 @@ Entrée : [1, 20, 15, 3, 5, -3, 41]
 Sortie : [3, -3]
 
 J'ai deux boucles imbriquées sur la liste t de taille n
-Donc chaque élément a est comparé à tous les éléments b → n × n opérations
+Donc chaque élément a est comparé à tous les éléments b : n × n opérations
 
 - Complexité : O(n²)
 
@@ -58,7 +58,7 @@ Entrée : [1, 20, 15, 3, 5, -4, 41]
 Sortie : [1, 3, -4]
 
 - On utilise trois boucles imbriquées, chacune parcourant n éléments.
-Donc tu examines toutes les combinaisons de trois éléments → n × n × n opérations.
+donc on examine toutes les combinaisons de trois éléments : n × n × n opérations.
 
 - Complexité : O(n³)
 
