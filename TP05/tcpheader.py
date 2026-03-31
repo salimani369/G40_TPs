@@ -4,6 +4,22 @@ import sys
 import time 
 from struct import *
 
+
+
+def checksum(data):
+    s = 0
+    for i in range(0, len(data), 2):
+        if i + 1 < len(data):
+            w = (data[i] << 8) + data[i + 1]
+        else:
+            w = (data[i] << 8)
+        s += w
+
+    while s >> 16:
+        s = (s & 0xFFFF) + (s >> 16)
+
+    return ~s & 0xFFFF
+
 def create_tcp_header(ip_source, ip_dest, message):
     tcp_source = 1234
     tcp_dest = 80
