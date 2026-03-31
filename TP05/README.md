@@ -2,6 +2,7 @@
 Le TP5 vise à voir ce qui se passe sous la couche Transport en construisant soi‑même les en‑têtes IP et TCP. Contrairement aux TPs précédents, l’OS ne gère plus les en‑têtes, la fiabilité ou la connexion : on fabrique et envoie un paquet complet (IP + TCP + données) à la main
 
 ##Principales différences avec les TPs précédents
+
 - UDP (TP1) utilise SOCK_DGRAM et laisse l’OS gérer l’en‑tête IP.
 - TCP (TP2–TP4) utilise SOCK_STREAM, nécessite connect() et bénéficie de la fiabilité intégrée
 - Raw socket (TP5) utilise SOCK_RAW + IPPROTO_RAW, sans connect(), et demande les droits root
@@ -9,6 +10,7 @@ Dans ce TP on crée l’en‑tête IP, l’en‑tête TCP (avec checksum), puis 
 Comparatif:
 
 ##UDP
+
 -Type : SOCK_DGRAM
 -Couche OSI : 4 (Transport)
 -Connexion : aucune (non connecté)
@@ -18,6 +20,7 @@ Comparatif:
 -Droits : utilisateur normal
 
 ##TCP
+
 -Type : SOCK_STREAM
 -Couche OSI : 4 (Transport)
 - Connexion : obligatoire (connect())
