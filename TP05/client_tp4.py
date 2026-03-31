@@ -16,7 +16,7 @@ def envoyer(message):
 
 def main():
 
-    # ---- message d'identification en XML ----
+    #message d'identification en XML 
     message_xml = """
 <client>
     <nom>client1</nom>
@@ -33,7 +33,7 @@ def main():
     for child in root:
         print(child.tag, child.text)
 
-    # ---- message d'identification en JSON ----
+    #message d'identification en JSON
     client_str = """
 {
     "nom": "client1",
@@ -50,7 +50,7 @@ def main():
     print(client['date_connexion'])
     print(client['lieu'])
 
-    # ---- boucle de chat TP3 ----
+    #boucle de chat 
     message = 'Bonjour, je suis un nouveau client'
     while True:
         envoyer(message)
