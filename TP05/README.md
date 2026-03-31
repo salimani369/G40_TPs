@@ -8,25 +8,25 @@ Le TP5 vise à voir ce qui se passe sous la couche Transport en construisant soi
 Dans ce TP on crée l’en‑tête IP, l’en‑tête TCP (avec checksum), puis on assemble et envoie le paquet avec sendto()
 Comparatif:
 
-##UDP (TP1)
-Type : SOCK_DGRAM
-Couche OSI : 4 (Transport)
-Connexion : aucune (non connecté)
- En‑têtes : gérés automatiquement par l’OS
-- Checksum : calculé par l’OS
-- Fiabilité : aucune garantie
-- Droits : utilisateur normal
+##UDP
+-Type : SOCK_DGRAM
+-Couche OSI : 4 (Transport)
+-Connexion : aucune (non connecté)
+-En‑têtes : gérés automatiquement par l’OS
+-Checksum : calculé par l’OS
+-Fiabilité : aucune garantie
+-Droits : utilisateur normal
 
-##TCP (TP2–TP4)
-- Type : SOCK_STREAM
-- Couche OSI : 4 (Transport)
+##TCP
+-Type : SOCK_STREAM
+-Couche OSI : 4 (Transport)
 - Connexion : obligatoire (connect())
 - En‑têtes IP/TCP : générés par l’OS
 - Checksum : calculé par l’OS
 - Fiabilité : assurée par TCP (retransmissions, ordre, intégrité)
 - Droits : utilisateur normal
 
-##Raw Socket (TP5)
+##Raw Socket
 - Type : SOCK_RAW + IPPROTO_RAW
 - Couche OSI : 3 (Réseau)
 - Connexion : aucune (pas de handshake TCP)
