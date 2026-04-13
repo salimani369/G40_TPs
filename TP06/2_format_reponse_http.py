@@ -13,7 +13,7 @@ def format_reponse_http(version_str, status_code, status_info, entetes, body):
     return reponse
  
  
-# --- Test ---
+# test
 entetes = {
     "Server": "PythonTPServer",
     "Connection": "Closed"

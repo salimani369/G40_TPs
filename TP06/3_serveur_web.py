@@ -4,7 +4,7 @@ PAGE_INDEX = """<!DOCTYPE html>
 <html>
 <body>
 <p>Bonjour</p>
-<p style="font-size:50px;">C'est notre premier serveur</p>
+<p style="font-size:50px;">Moi c'est Sarah et c'est notre premier serveur</p>
 </body>
 </html>"""
  
