@@ -1,20 +1,20 @@
 ####Lien météo (requests)
 
-requests.get() permet d’envoyer une requête HTTP, un peu comme tu le ferais avec Postman ou HTTPie, mais directement depuis Python.
+requests.get() permet d’envoyer une requête HTTP, un peu comme on le ferais avec Postman ou HTTPie, mais directement depuis Python.
 
-Ensuite, response.json() transforme automatiquement la réponse en dictionnaire Python, ce qui évite de manipuler du texte brut — c’est super pratique.
+Ensuite, response.json() transforme automatiquement la réponse en dictionnaire Python, ce qui évite de manipuler du texte brut et c’est pratique.
 
-Quand tu utilises params={}, Python se charge tout seul de construire l’URL avec les paramètres (?q=Paris&units=metric...), donc pas besoin de le faire à la main.
+Quand on utilise params={}, python se charge tout seul de construire l’URL avec les paramètr, donc pas besoin de le faire à la main.
 
-Par contre, le code ne gère pas encore les erreurs réseau (par exemple si tu n’as pas internet). Idéalement, il faudrait ajouter un try/except.
+Par contre, le code ne gère pas encore les erreurs réseau (par exemple y’as pas internet). il faudrait ajouter un try/except.
 
 #######Django REST Framework
 
-ModelViewSet est très pratique : avec une seule classe, tu obtiens automatiquement toutes les routes classiques (GET, POST, PUT, DELETE, LIST), sans avoir à tout coder.
+ModelViewSet est très pratique car avec une seule classe, on obtient automatiquement toutes les routes classiques (GET, POST, PUT, DELETE, LIST), sans avoir à tout coder.
 
 Le router.register() simplifie aussi beaucoup les choses, car il fait automatiquement le lien entre les URLs et les méthodes HTTP.
 
-Le sérialiseur est central : il convertit les données dans les deux sens (Python → JSON et JSON → Python) et s’occupe aussi de valider les données reçues.
+Le sérialiseur est très important : il convertit les données dans les deux sens (Python → JSON et JSON → Python) et s’occupe aussi de valider les données reçues.
 
 -par défaut, l’API est ouverte. N’importe qui peut accéder, créer ou supprimer des données. En production, il faut absolument ajouter de la sécurité (authentification, permissions…).
 
