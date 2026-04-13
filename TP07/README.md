@@ -1,0 +1,1 @@
+Ajout d'un serialisuer : Le sérialiseur convertit les objets Python/Django en JSON (et inversement).
