@@ -1,3 +1,4 @@
+import socket
 class Game:
     def __init__(self, initial_sticks, max_players):
         # Nombre de bâtonnets au début (on ne le change jamais)
@@ -75,14 +76,14 @@ while True:
     print("Reçu :", message.decode())
 
     # répondre au client
-    server.sendto(b"message reçu", addr)
+    server.sendto("message reçu", addr)
 
 
 #cient UDP 
 client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # envoyer message au serveur
-client.sendto(b"hello", ("localhost", 1234))
+client.sendto("hello", ("localhost", 1234))
 
 # recevoir réponse
 data, addr = client.recvfrom(1024)
