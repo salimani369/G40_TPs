@@ -6,7 +6,7 @@ from tcpheader import create_tcp_header
 MAX_BYTES = 65535
 
 def create_packet(ip_header, tcp_header, data):
-    # simple concaténation des headers et des données
+    #concaténation des headers et des données
     return ip_header + tcp_header + data.encode()
 
 def client(port):

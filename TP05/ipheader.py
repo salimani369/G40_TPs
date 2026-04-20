@@ -16,7 +16,7 @@ def create_ip_header(ip_source, ip_dest):
     ip_frag_off  = 0        # pas de fragmentation
     ip_ttl       = 255      # time to live : combien de routeurs le paquet peut traverser
     ip_proto     = socket.IPPROTO_TCP   # on utilise TCP
-    ip_check     = 0        # checksum a 0 l'OS le recalcule
+    ip_check     = 0       
     ip_saddr     = socket.inet_aton(ip_source)  # adresse source en bytes
     ip_daddr     = socket.inet_aton(ip_dest)    # adresse destination en bytes
  
